@@ -22,7 +22,7 @@ print("toStr(\"736f6d65206d657373616765\") = \"%s\"" % toStr("736f6d65206d657373
 def Xor(s1, s2):
     res = ""
     for i in range(len(s1)):
-        res += format(int(s1[i], 16) ^ int(s2[i], 16), '01x')
+        res = res + format(int(s1[i], 16) ^ int(s2[i], 16), '01x')
     return res
 
 #To encrypt, we need to Xor the message with the key and get the ciphertext. However, before doing that we are going to convert them both to hex strings. To decrypt, we need to xor the ciphertext with the key. However, before doing that we need to convert key to hex, and after doing that we need to convert the resulting hex string to the regular string, so that we get the initial message and not its hex form.
